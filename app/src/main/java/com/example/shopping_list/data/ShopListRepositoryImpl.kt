@@ -7,6 +7,7 @@ object ShopListRepositoryImpl: ShopListRepository {
 
     private var shopList = mutableListOf<ShopItem>()
 
+    //создание списка, сделано криво
     var autoIncrementId = 0
 
     init {
@@ -17,6 +18,7 @@ object ShopListRepositoryImpl: ShopListRepository {
 
     }
 
+    //реализация функционала
     override fun addShopItem(shopItem: ShopItem) {
         if (shopItem.id == ShopItem.UNDEFINED_ID) shopItem.id = autoIncrementId++
         shopList.add(shopItem)
